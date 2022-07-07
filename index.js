@@ -8,8 +8,6 @@ const resolvers = require("./resolvers");
 require("dotenv").config();
 
 //Database Connection
-
-
 mongoose.connect(
   process.env.MONGODB_URL,
   {
@@ -18,7 +16,6 @@ mongoose.connect(
   },
   () => console.log("DB CONNECTED")
 );
-
 
 const startServer = async () => {
   const app = express();
