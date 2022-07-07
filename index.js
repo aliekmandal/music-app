@@ -5,12 +5,13 @@ const mongoose = require("mongoose");
 const typeDefs = require("./typeDefs");
 const resolvers = require("./resolvers");
 
+require("dotenv").config();
+
 //Database Connection
-const URL =
-  "mongodb+srv://futoid:123123123@datax.58sdb.mongodb.net/?retryWrites=true&w=majority";
+
 
 mongoose.connect(
-  URL,
+  process.env.MONGODB_URL,
   {
     useUnifiedTopology: true,
     useNewUrlParser: true,
